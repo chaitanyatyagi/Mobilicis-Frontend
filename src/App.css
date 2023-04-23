@@ -1,10 +1,38 @@
 .App {
   text-align: center;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.head {
+  width: 100vw;
+  height: 10vh;
+  font-size: 2em;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+@media(max-width:400px) {
+  .head {
+    height: 20vh;
+  }
+}
+
+@media(max-width:200px) {
+  .head {
+    height: 30vh;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -32,6 +60,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
